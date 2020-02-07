@@ -1,6 +1,7 @@
 package vikas.Consignment;
 
 
+import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -30,6 +31,7 @@ public class consignments {
 			driver.findElement(By.xpath("//div[@class=\"card effect2\"]//input[@name=\"password\"]")).sendKeys("Store.123");
 			driver.findElement(By.xpath("//div[@class=\"card effect2\"]//button[@type=\"submit\"]")).click();
 			Thread.sleep(3000);
+			
 //			List<WebElement> li = driver.findElements(By.xpath("//input[@type=\"checkbox\"]"));
 //			for(int i = 0; i<5;i++) {
 //				li.get(i).click();
@@ -207,6 +209,11 @@ public class consignments {
 		if(vi.contentEquals(ee)) {
 			li.get(i-2).click();
 			break;}}
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("Window.open()");
+		for(String cw: driver.getWindowHandles()) {
+			driver.switchTo().window(cw);
+		}
 
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@value=\"Create Consignment\"]")).click();
