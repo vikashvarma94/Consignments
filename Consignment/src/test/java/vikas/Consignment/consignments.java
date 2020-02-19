@@ -66,9 +66,8 @@ public class consignments {
 //			//driver.navigate().back();
 			Thread.sleep(3000);}
 			//add to cart
-			 driver.findElement(By.xpath("(//button[@class='btn buy-btn'])[1]")).click();
-			   Thread.sleep(2000);
-			 			   
+			    driver.findElement(By.xpath("(//button[@class='btn buy-btn'])[1]")).click();
+			    Thread.sleep(2000);		   
 				driver.findElement(By.xpath("//input[@id=\"MobileNumber\"]")).sendKeys("9666262992");
 				Thread.sleep(2000);
 				driver.findElement(By.xpath("//input[@id=\"btnSave\"]")).click();
@@ -91,12 +90,12 @@ public class consignments {
 			 //No
 			 //driver.findElement(By.xpath("//button[@class=\"btn btn-default\"]")).click();
 			 */
-		 //Full Amount
+				//Full Amount
 				//driver.findElement(By.xpath("//input[@value=\"10\"]")).click();	
 //				WebElement checkbox = driver.findElement(By.xpath("//input[@value=\"10\"]"));
 //				JavascriptExecutor js =(JavascriptExecutor) driver;
 //				js.executeScript("arguments[0].click();",checkbox);
-		//Booking Amount.........
+				//Booking Amount.........
 				Thread.sleep(2000);
 				//driver.findElement(By.xpath("//input[@value=\"20\"]")).click();
 				WebElement checkbox10 = driver.findElement(By.xpath("//input[@value=\"20\"]"));
@@ -112,10 +111,10 @@ public class consignments {
 //				 driver.findElement(By.xpath("(//input[@value=\"Submit\"])[1]")).click();
 	
 				 Thread.sleep(2000);
-				driver.findElement(By.xpath("//button[@ng-click=\"CheckOut()\"]")).click();
+				 driver.findElement(By.xpath("//button[@ng-click=\"CheckOut()\"]")).click();
 			
 					 //Store address
-					WebElement link11= driver.findElement(By.xpath("//div[@class=\"col-md-4 address-details\"]//label[@class=\"label-wrapper\"]//input[@value=\"10\"]"));
+					 WebElement link11= driver.findElement(By.xpath("//div[@class=\"col-md-4 address-details\"]//label[@class=\"label-wrapper\"]//input[@value=\"10\"]"));
 					 JavascriptExecutor js11 =(JavascriptExecutor) driver;
 					 js11.executeScript("arguments[0].click();",link11);
 					 Thread.sleep(2000);
@@ -154,7 +153,7 @@ public class consignments {
 					 driver.findElement(By.id("OTP")).sendKeys("123456");
 					 driver.findElement(By.xpath("//button[@ng-click=\"Confirm_OTP(SOTP)\"]")).click();
 					 Thread.sleep(2000);
-					String ee = driver.findElement(By.xpath("(//div/table/tbody/tr/td)[2]")).getText();
+					 String ee = driver.findElement(By.xpath("(//div/table/tbody/tr/td)[2]")).getText();
 					 System.out.println(ee);
 					 Thread.sleep(1000);
 					 
